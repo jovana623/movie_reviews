@@ -9,6 +9,7 @@ class Movie(models.Model):
     title=models.CharField(max_length=255)
     description=models.TextField()
     release_date=models.DateField()
+    length=models.IntegerField(default=60)
     genres=models.ManyToManyField(Genre,related_name='movies')
     director=models.ForeignKey(Director,related_name='movies',on_delete=models.CASCADE,default=1)
     actors=models.ManyToManyField(Actor,related_name='movies')

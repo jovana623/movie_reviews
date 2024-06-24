@@ -18,7 +18,7 @@ class MovieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=Movie
-        fields=['id','title','description','release_date','genres','genre_ids','director','director_id','actors','actor_ids']
+        fields=['id','title','description','release_date','length','genres','genre_ids','director','director_id','actors','actor_ids']
 
     def create(self, validated_data):
         genre_ids=validated_data.pop('genre_ids')
