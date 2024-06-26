@@ -1,0 +1,19 @@
+@import "../abstract/variables.scss";
+
+.hero__details {
+  color: $color-white;
+  padding: 15% $container-padding;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &--title {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  &--genre {
+    display: flex;
+    gap: 3rem;
+  }
+}
