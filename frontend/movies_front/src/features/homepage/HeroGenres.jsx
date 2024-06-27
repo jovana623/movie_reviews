@@ -1,11 +1,14 @@
 import "../../styles/components/HeroGenres.scss";
+import { NavLink } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 function HeroGenres({ genre }) {
   return (
-    <div className="genre__container">
-      <p className="genre__container--name">{genre}</p>
-    </div>
+    <button className="genre__container">
+      <NavLink to="">
+        <p className="genre__container--name">{genre}</p>
+      </NavLink>
+    </button>
   );
 }
 
