@@ -1,0 +1,14 @@
+@import "../abstract/variables.scss";
+
+.categories__nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  justify-content: space-around;
+  padding: 0 30%;
+
+  & a {
+    text-decoration: none;
+    color: $color-black;
+  }
+}

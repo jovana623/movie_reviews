@@ -1,0 +1,34 @@
+@import "../abstract/variables.scss";
+
+.trailer__section {
+  padding: 0 $container-padding;
+  background-color: $color-bone-white;
+  margin-bottom: 10rem;
+  position: relative;
+
+  &--trailers {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-bottom: 20rem;
+  }
+
+  &--categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 5rem;
+  }
+
+  &--search {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

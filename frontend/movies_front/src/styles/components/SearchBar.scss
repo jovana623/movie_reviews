@@ -1,0 +1,39 @@
+@import "../abstract/variables.scss";
+
+.search {
+  position: relative;
+  &__input {
+    margin-top: 2rem;
+    padding: 1.2rem 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border: none;
+    border-radius: 2rem;
+    width: 30rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-red;
+      font-size: 1.4rem;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translate(-50%);
+    z-index: 2;
+    color: $color-red;
+  }
+}
