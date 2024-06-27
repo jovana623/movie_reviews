@@ -5,5 +5,5 @@ from .views import CreateMovieAPIView,MovieRetrieveUpdateDestoyAPIView,MovieList
 urlpatterns = [
     path("",MovieListAPIView.as_view(),name='movie-list'),
     path('create/',CreateMovieAPIView.as_view(),name='movie-create'),
-    path('<int:pk>',MovieRetrieveUpdateDestoyAPIView.as_view(),name='movie-detail')
+    path('<int:pk>',MovieRetrieveUpdateDestoyAPIView.as_view(),name='movie-detail'),
 ]
