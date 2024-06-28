@@ -1,6 +1,66 @@
+@import "../abstract/variables.scss";
+
 .movie__card {
+  display: flex;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 2rem;
+  gap: 3rem;
+
   &--poster {
-    width: 15rem;
-    height: 25rem;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 1.5rem;
+    margin-left: 5%;
+    margin-bottom: -5%;
+    margin-top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--details {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &--title {
+    font-size: 1.8rem;
+  }
+
+  &--genres {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: $color-dark-gray;
+  }
+
+  &--year {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &--description {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: $color-dark-gray;
+  }
+
+  &--rating {
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+}
+
+.rating__box {
+  background-color: yellow;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }

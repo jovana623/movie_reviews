@@ -1,0 +1,8 @@
+@import "../abstract/variables.scss";
+
+.movie__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10rem;
+  gap: 8rem;
+}
