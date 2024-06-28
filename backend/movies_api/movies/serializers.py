@@ -15,6 +15,7 @@ class MovieSerializer(serializers.ModelSerializer):
     director_id = serializers.PrimaryKeyRelatedField(queryset=Director.objects.all(), write_only=True, required=False)
     actors=ActorSerializer(many=True,read_only=True)
     actor_ids=serializers.PrimaryKeyRelatedField(queryset=Actor.objects.all(),many=True,write_only=True)
+    image = serializers.ImageField(required=False)
 
     class Meta:
         model=Movie
