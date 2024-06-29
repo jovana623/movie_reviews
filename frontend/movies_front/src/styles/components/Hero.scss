@@ -1,6 +1,6 @@
 .hero {
   background-image: url("image-asset.jpeg");
-  height: 85dvh;
+  height: 85vh;
   width: 100%;
   margin-top: -6.3rem;
   background-blend-mode: darken;
@@ -8,6 +8,9 @@
   background-size: cover;
   background-position: center;
   z-index: -3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   &::before {
     content: "";

@@ -12,3 +12,21 @@
     color: $color-black;
   }
 }
+
+@media (max-width: 1096px) {
+  .categories__nav {
+    padding: 0 25%;
+  }
+}
+
+@media (max-width: 830px) {
+  .categories__nav {
+    padding: 0 20%;
+  }
+}
+
+@media (max-width: 616px) {
+  .categories__nav {
+    padding: 0 15%;
+  }
+}
