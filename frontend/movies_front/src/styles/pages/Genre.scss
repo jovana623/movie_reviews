@@ -6,3 +6,10 @@
   padding: 10rem;
   gap: 8rem;
 }
+
+@media (max-width: 1000px) {
+  .movie__grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

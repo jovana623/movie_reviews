@@ -6,6 +6,7 @@
     rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
   border-radius: 2rem;
   gap: 3rem;
+  padding-right: 5%;
 
   &--poster {
     width: 20rem;
@@ -53,7 +54,7 @@
 
   &--rating {
     margin-top: 5%;
-    margin-right: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -63,4 +64,14 @@
   border-radius: 1rem;
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+@media (max-width: 1279px) {
+  .movie__card {
+    &__poster {
+      width: 15rem;
+      height: 25rem;
+      margin-bottom: -15rem;
+    }
+  }
 }
