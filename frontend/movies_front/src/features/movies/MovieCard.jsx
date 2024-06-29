@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../styles/components/MovieCard.scss";
 
 /* eslint-disable react/prop-types */
@@ -19,7 +20,9 @@ function MovieCard({ movie }) {
         className="movie__card--poster"
       />
       <div className="movie__card--details">
-        <h3 className="movie__card--title">{movie.title}</h3>
+        <NavLink to={`/movies/${movie.id}`} className="movie__card--title">
+          {movie.title}
+        </NavLink>
         <div className="movie__card--genres">
           {movie.genres.map((genre) => (
             <p key={genre.id}>{genre.name}</p>
@@ -27,7 +30,7 @@ function MovieCard({ movie }) {
         </div>
         <p className="movie__card--year">{year}</p>
         <p className="movie__card--description">
-          {shortDescription(movie.description, 15)}
+          {shortDescription(movie.description, 12)}
         </p>
       </div>
       <div className="movie__card--rating">

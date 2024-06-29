@@ -9,10 +9,8 @@ function Genre() {
   const searchParams = new URLSearchParams(location.search);
   const genreId = searchParams.get("genre_id");
   const { genre, isLoading: isLoadingGenre } = useGenre(genreId);
-  console.log(genreId);
-  console.log(genre);
-
   const { movies, isLoading } = useMovies(genreId);
+
   if (isLoading || isLoadingGenre) return <div>Loading...</div>;
   return (
     <div className="genre__page">
