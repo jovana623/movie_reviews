@@ -6,7 +6,7 @@ from actors.models import Actor
 # Create your models here.
 
 def upload_to(instance,filename):
-        return 'images/{filename}'.format(filename=filename)
+    return 'images/{filename}'.format(filename=filename)
 
 class Movie(models.Model):
     title=models.CharField(max_length=255)
