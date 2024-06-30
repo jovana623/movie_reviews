@@ -2,11 +2,13 @@ import { useParams } from "react-router-dom";
 import { useMovie } from "../features/movies/useMovie";
 import "../styles/pages/MoviePage.scss";
 import HeroGenres from "../features/homepage/HeroGenres";
+import { useActor } from "../features/actors/useActor";
 
 function MoviePage() {
   const { id } = useParams();
   const { movie, isLoading } = useMovie(id);
-  console.log(movie);
+  const { actor } = useActor(12);
+  console.log(actor);
 
   if (!movie) {
     return <div>Movie not found or data not loaded.</div>;
