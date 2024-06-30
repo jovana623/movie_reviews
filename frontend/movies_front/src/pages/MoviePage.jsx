@@ -3,7 +3,6 @@ import { useMovie } from "../features/movies/useMovie";
 import "../styles/pages/MoviePage.scss";
 import SingleMovieDetails from "../features/movies/SingleMovieDetails";
 import ActorCard from "../features/actors/ActorCard";
-import ActorSlider from "../features/actors/ActorsSlider";
 
 function MoviePage() {
   const { id } = useParams();

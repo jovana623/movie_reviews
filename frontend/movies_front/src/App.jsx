@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "../src/styles/base/base.scss";
-import Genre from "./pages/Genre";
+import Movies from "./pages/Movies";
 import MoviePage from "./pages/MoviePage";
 import MainLayout from "./pages/MainLayout";
 
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="" element={<MainLayout />}>
             <Route path="" element={<Homepage />} />
-            <Route path="/genres" element={<Genre />} />
+            <Route path="/movies" element={<Movies />} />
             <Route path="/movies/:id" element={<MoviePage />} />
           </Route>
         </Routes>

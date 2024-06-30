@@ -3,8 +3,6 @@ import "../../styles/components/MovieCard.scss";
 
 /* eslint-disable react/prop-types */
 function MovieCard({ movie }) {
-  const year = new Date(movie.release_date).getFullYear();
-
   function shortDescription(description, limit) {
     const words = description.split(" ");
     if (words.length > limit) {
@@ -28,13 +26,9 @@ function MovieCard({ movie }) {
             <p key={genre.id}>{genre.name}</p>
           ))}
         </div>
-        <p className="movie__card--year">{year}</p>
         <p className="movie__card--description">
           {shortDescription(movie.description, 12)}
         </p>
-      </div>
-      <div className="movie__card--rating">
-        <div className="rating__box">9.8</div>
       </div>
     </div>
   );
