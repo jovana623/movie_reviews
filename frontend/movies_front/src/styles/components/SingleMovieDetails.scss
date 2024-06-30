@@ -1,0 +1,57 @@
+@import "../abstract/variables.scss";
+
+.movie__info {
+  display: flex;
+  gap: 5rem;
+
+  &-image {
+    width: 35rem;
+    height: 50rem;
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &-year-duration {
+    display: flex;
+    gap: 1rem;
+    font-size: 2rem;
+    color: $color-dark-gray;
+  }
+
+  &-title {
+    font-size: 4rem;
+  }
+
+  &-genres {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &-description {
+    font-size: 2rem;
+    width: 70%;
+    color: $color-dark-gray;
+  }
+
+  &-director {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 955px) {
+  .movie__info {
+    &-description {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .movie__info {
+    flex-direction: column;
+  }
+}

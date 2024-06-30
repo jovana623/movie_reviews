@@ -1,0 +1,15 @@
+.slider__container {
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 2;
+  }
+
+  .slick-dots {
+    bottom: -25px;
+  }
+}
