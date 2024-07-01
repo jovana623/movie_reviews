@@ -1,3 +1,9 @@
 .home__layout {
   width: 100%;
 }
+
+.content__container {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}

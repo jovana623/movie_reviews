@@ -9,7 +9,9 @@ function MainLayout() {
       <div className="nav__container">
         <NavMenu />
       </div>
-      <Outlet />
+      <div className="content__container">
+        <Outlet />
+      </div>
     </div>
   );
 }

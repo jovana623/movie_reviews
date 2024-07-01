@@ -1,6 +1,7 @@
 @import "../abstract/variables.scss";
 
 .movie__page {
+  position: relative;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -13,6 +14,7 @@
   width: 100%;
   color: $color-white;
   padding: 5rem $container-padding;
+  margin-top: -6.5rem;
 }
 
 .movie__background {

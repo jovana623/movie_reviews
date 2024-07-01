@@ -12,6 +12,18 @@
   &--title {
     font-size: 4rem;
     font-weight: 800;
+    color: $color-white;
+    text-decoration: none;
+
+    & a {
+      color: $color-white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
   }
 
   &--genre {

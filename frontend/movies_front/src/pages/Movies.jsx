@@ -1,17 +1,21 @@
+import { useSearchParams } from "react-router-dom";
+import Filters from "../features/movies/Filters";
 import MovieCard from "../features/movies/MovieCard";
 import { useMovies } from "../features/movies/useMovies";
 import "../styles/pages/Movies.scss";
 
 function Movies() {
-  //const location = useLocation();
-  //const searchParams = new URLSearchParams(location.search);
-  //const genreId = searchParams.get("genre_id");
-  //const { genre, isLoading: isLoadingGenre } = useGenre(genreId);
-  const { movies, isLoading } = useMovies();
+  const [searchParams] = useSearchParams();
+  const selectedGenreId = searchParams.get("genre");
+  console.log(selectedGenreId);
+
+  const { movies, isLoading } = useMovies(selectedGenreId);
 
   if (isLoading) return <div>Loading...</div>;
+
   return (
     <div className="genre__page">
+      <Filters />
       <div className="movie__grid">
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />

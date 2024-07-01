@@ -4,10 +4,12 @@
   display: flex;
   gap: 3rem;
   width: 100%;
-  margin: 2rem auto;
   font-size: 2rem;
   justify-content: space-between;
-  padding: 0 $container-padding;
+  padding: 2rem $container-padding;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
 
   &__item {
     text-decoration: none;

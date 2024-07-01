@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "../../styles/components/HeroDetails.scss";
 import { useMovie } from "../movies/useMovie";
 import HeroButton from "./HeroButton";
@@ -9,7 +10,9 @@ function HeroDetails() {
   console.log(movie.genres);
   return (
     <div className="hero__details">
-      <h1 className="hero__details--title">{movie.title}</h1>
+      <NavLink to={`movies/${movie.id}`} className="hero__details--title">
+        {movie.title}
+      </NavLink>
       <div className="hero__details--genre">
         {movie.genres.map((genre) => {
           return <HeroGenres key={genre.id} genre={genre.name} />;

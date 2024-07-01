@@ -13,7 +13,7 @@ function TrailerSection() {
     <div className="trailer__section">
       <div className="trailer__section--trailers">
         {featured_movies.map((movie) => (
-          <Trailer key={movie.id} name={movie.title} image={movie.image} />
+          <Trailer key={movie.id} movie={movie} />
         ))}
       </div>
       <div className="trailer__section--categories">
