@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { getMovies } from "../../services/apiMovies";
 
-export function useMovies(genreId) {
+export function useMovies(genreId, year) {
   const { data: movies, isLoading } = useQuery({
-    queryFn: () => getMovies(genreId),
-    queryKey: ["movies", genreId],
+    queryFn: () => getMovies(genreId, year),
+    queryKey: ["movies", genreId, year],
   });
 
   return { movies, isLoading };

@@ -1,0 +1,15 @@
+@import "../abstract/variables.scss";
+
+.filters {
+  background-color: $color-dark-blue;
+  padding: 2rem 10rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+
+@media (max-width: 720px) {
+  .filters {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,8 @@
+@import "../abstract/variables.scss";
+
+.select__filter {
+  background-color: $color-dark-blue;
+  color: $color-white;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+}

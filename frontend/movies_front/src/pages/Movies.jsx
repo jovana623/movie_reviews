@@ -7,9 +7,10 @@ import "../styles/pages/Movies.scss";
 function Movies() {
   const [searchParams] = useSearchParams();
   const selectedGenreId = searchParams.get("genre");
-  console.log(selectedGenreId);
+  const selectedYear = searchParams.get("year");
+  console.log(selectedYear);
 
-  const { movies, isLoading } = useMovies(selectedGenreId);
+  const { movies, isLoading } = useMovies(selectedGenreId, selectedYear);
 
   if (isLoading) return <div>Loading...</div>;
 

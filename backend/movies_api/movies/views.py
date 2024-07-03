@@ -12,10 +12,15 @@ class MovieListAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         genre_id=self.request.query_params.get('genre_id')
+        year=self.request.query_params.get('year',None)
+        queryset = Movie.objects.all()
         if genre_id:
-            return Movie.objects.filter(genres__id=genre_id)
-        return Movie.objects.all()
-
+            queryset = queryset.filter(genres__id=genre_id)
+        if year is not None:
+            queryset = queryset.filter(release_date__year=year)
+        return queryset
+    
+    
 
 class CreateMovieAPIView(generics.CreateAPIView):
     queryset=Movie.objects.all()
