@@ -25,3 +25,13 @@ export async function getMovieById(movieId) {
   );
   return response.data;
 }
+
+export async function createMovie(movieData) {
+  const url = "http://127.0.0.1:8000/api/movies/create/";
+  const response = await axios.post(url, movieData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  return response.data;
+}

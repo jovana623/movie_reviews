@@ -12,11 +12,13 @@ function MovieCard({ movie }) {
   }
   return (
     <div className="movie__card">
-      <img
-        src={movie.image}
-        alt={`${movie.title} poster`}
-        className="movie__card--poster"
-      />
+      <NavLink to={`/movies/${movie.id}`}>
+        <img
+          src={movie.image}
+          alt={`${movie.title} poster`}
+          className="movie__card--poster"
+        />
+      </NavLink>
       <div className="movie__card--details">
         <NavLink to={`/movies/${movie.id}`} className="movie__card--title">
           {movie.title}
