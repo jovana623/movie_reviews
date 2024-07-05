@@ -1,0 +1,55 @@
+.trailer {
+  width: 30rem;
+  height: 35rem;
+  border-radius: 2rem;
+  margin-top: -50%;
+  position: relative;
+}
+.trailer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 40%), linear-gradient(to top, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 40%);
+  pointer-events: none;
+}
+.trailer__poster {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.trailer__details {
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.trailer__details--button {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 1rem;
+}
+.trailer__details--button:hover {
+  cursor: pointer;
+}
+.trailer__details--icon {
+  color: #dc143c;
+  font-size: 2.5rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.trailer__details--icon:hover {
+  font-size: 3rem;
+}
+
+@media (max-width: 800px) {
+  .trailer {
+    margin-top: -25%;
+  }
+}/*# sourceMappingURL=Trailer.css.map */

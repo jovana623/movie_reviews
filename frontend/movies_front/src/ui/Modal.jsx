@@ -32,7 +32,7 @@ function Window({ children, name }) {
   return createPortal(
     <div className="modal">
       <div className="modal__window">
-        <button onClick={close}>
+        <button onClick={close} className="modal__window-btn">
           <HiXMark />
         </button>
         <div>{children}</div>

@@ -1,0 +1,21 @@
+.actor__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  z-index: 3;
+}
+.actor__card-image {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.actor__card-name {
+  font-size: 2rem;
+}/*# sourceMappingURL=ActorCard.css.map */

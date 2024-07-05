@@ -1,0 +1,11 @@
+.slider__container .slick-slide {
+  display: flex;
+  justify-content: center;
+}
+.slider__container .slick-prev,
+.slider__container .slick-next {
+  z-index: 2;
+}
+.slider__container .slick-dots {
+  bottom: -25px;
+}/*# sourceMappingURL=ActorSlider.css.map */

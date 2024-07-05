@@ -1,0 +1,46 @@
+.movie__info {
+  display: flex;
+  gap: 5rem;
+  margin-top: 10rem;
+}
+.movie__info-image {
+  width: 35rem;
+  height: 50rem;
+}
+.movie__info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.movie__info-year-duration {
+  display: flex;
+  gap: 1rem;
+  font-size: 2rem;
+  color: #a9a9a9;
+}
+.movie__info-title {
+  font-size: 4rem;
+}
+.movie__info-genres {
+  display: flex;
+  gap: 1rem;
+}
+.movie__info-description {
+  font-size: 2rem;
+  width: 70%;
+  color: #a9a9a9;
+}
+.movie__info-director {
+  font-size: 2rem;
+}
+
+@media (max-width: 955px) {
+  .movie__info-description {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .movie__info {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=SingleMovieDetails.css.map */

@@ -1,0 +1,72 @@
+.movie__form {
+  background-color: #1e2124;
+  padding: 2rem 4rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.movie__form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+  width: 100%;
+}
+.movie__form-field {
+  align-self: center;
+  justify-self: center;
+  background-color: #121212;
+  border: 1px solid #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  width: 100%;
+}
+.movie__form-checkbox {
+  display: flex;
+  gap: 0.5rem;
+}
+.movie__form-submit {
+  align-self: flex-end;
+  background-color: #1e2124;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+}
+.movie__form-submit:hover {
+  cursor: pointer;
+  background-color: #121212;
+}
+.movie__form-error {
+  color: #fff;
+}
+
+.checkbox__layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  align-items: center;
+}
+
+input[type=file]::file-selector-button {
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: #1e2124;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+}
+input[type=file]::file-selector-button:hover {
+  cursor: pointer;
+  background-color: #121212;
+}/*# sourceMappingURL=CreateMovieForm.css.map */

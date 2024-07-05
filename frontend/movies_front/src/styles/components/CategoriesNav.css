@@ -1,0 +1,27 @@
+.categories__nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  justify-content: space-around;
+  padding: 0 30%;
+}
+.categories__nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 1096px) {
+  .categories__nav {
+    padding: 0 25%;
+  }
+}
+@media (max-width: 830px) {
+  .categories__nav {
+    padding: 0 20%;
+  }
+}
+@media (max-width: 616px) {
+  .categories__nav {
+    padding: 0 15%;
+  }
+}/*# sourceMappingURL=CategoriesNav.css.map */
