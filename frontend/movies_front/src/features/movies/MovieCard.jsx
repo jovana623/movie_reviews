@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import "../../styles/components/MovieCard.scss";
 import { FaRegTrashCan } from "react-icons/fa6";
+import { LuPencilLine } from "react-icons/lu";
 import { useDeleteMovie } from "./useDeleteMovie";
+import Modal from "../../ui/Modal";
 
 /* eslint-disable react/prop-types */
 function MovieCard({ movie }) {
@@ -31,6 +33,14 @@ function MovieCard({ movie }) {
           <NavLink to={`/movies/${movie.id}`} className="movie__card--title">
             {movie.title}
           </NavLink>
+          <Modal>
+            <Modal.OpenButton opens="update_form">
+              <LuPencilLine className="movie__card--delete" />
+            </Modal.OpenButton>
+            <Modal.Window name="update_form">
+              <div>Test</div>
+            </Modal.Window>
+          </Modal>
           <FaRegTrashCan
             className="movie__card--delete"
             onClick={() => deleteMovie(movie.id)}
