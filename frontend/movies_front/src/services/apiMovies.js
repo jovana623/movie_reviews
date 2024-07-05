@@ -41,3 +41,13 @@ export async function deleteMovie(movieId) {
   const response = await axios.delete(url);
   return response.data;
 }
+
+export async function updateMovie(movieId, updatedData) {
+  const url = `http://127.0.0.1:8000/api/movies/${movieId}`;
+  const response = await axios.patch(url, updatedData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+  return response.data;
+}

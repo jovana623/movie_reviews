@@ -4,6 +4,7 @@ import { FaRegTrashCan } from "react-icons/fa6";
 import { LuPencilLine } from "react-icons/lu";
 import Modal from "../../ui/Modal";
 import DeleteWindow from "../../ui/DeleteWindow";
+import CreateMovieForm from "./CreateMovieForm";
 
 /* eslint-disable react/prop-types */
 function MovieCard({ movie }) {
@@ -34,7 +35,9 @@ function MovieCard({ movie }) {
               <LuPencilLine className="movie__card--delete" />
             </Modal.OpenButton>
             <Modal.Window name="update_form">
-              <div>Test</div>
+              <div className="update_form">
+                <CreateMovieForm movieToUpdate={movie} />
+              </div>
             </Modal.Window>
           </Modal>
           <Modal>
