@@ -2,11 +2,13 @@ import { NavLink } from "react-router-dom";
 import "../../styles/components/MovieCard.scss";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { LuPencilLine } from "react-icons/lu";
+import { useDeleteMovie } from "./useDeleteMovie";
 import Modal from "../../ui/Modal";
-import DeleteWindow from "../../ui/DeleteWindow";
 
 /* eslint-disable react/prop-types */
 function MovieCard({ movie }) {
+  const { deleteMovie, isLoading } = useDeleteMovie();
+
   function shortDescription(description, limit) {
     const words = description.split(" ");
     if (words.length > limit) {
@@ -14,6 +16,8 @@ function MovieCard({ movie }) {
     }
     return description;
   }
+
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <div className="movie__card">
@@ -37,14 +41,10 @@ function MovieCard({ movie }) {
               <div>Test</div>
             </Modal.Window>
           </Modal>
-          <Modal>
-            <Modal.OpenButton opens="delete_movie">
-              <FaRegTrashCan className="movie__card--delete" />
-            </Modal.OpenButton>
-            <Modal.Window name="delete_movie">
-              <DeleteWindow movie={movie} />
-            </Modal.Window>
-          </Modal>
+          <FaRegTrashCan
+            className="movie__card--delete"
+            onClick={() => deleteMovie(movie.id)}
+          />
         </div>
         <div className="movie__card--genres">
           {movie.genres.map((genre) => (
