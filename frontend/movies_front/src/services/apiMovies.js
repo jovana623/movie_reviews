@@ -35,3 +35,9 @@ export async function createMovie(movieData) {
   });
   return response.data;
 }
+
+export async function deleteMovie(movieId) {
+  const url = `http://127.0.0.1:8000/api/movies/${movieId}`;
+  const response = await axios.delete(url);
+  return response.data;
+}
