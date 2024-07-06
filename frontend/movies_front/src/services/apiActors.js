@@ -12,3 +12,14 @@ export async function getActor(actorId) {
 
   return response.data;
 }
+
+export async function createActor(actorData) {
+  const url = "http://127.0.0.1:8000/api/actors/";
+  const response = await axios.post(url, actorData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+
+  return response.data;
+}
