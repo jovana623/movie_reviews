@@ -1,7 +1,9 @@
 import "../../styles/components/ActorDetails.scss";
 import { FaRegTrashCan } from "react-icons/fa6";
+import { LuPencilLine } from "react-icons/lu";
 import Modal from "../../ui/Modal";
 import DeleteWindow from "../../ui/DeleteWindow";
+import ActorForm from "./ActorForm";
 
 /* eslint-disable react/prop-types */
 function ActorDetails({ actor }) {
@@ -21,6 +23,14 @@ function ActorDetails({ actor }) {
             </Modal.OpenButton>
             <Modal.Window name="delete-actor">
               <DeleteWindow object={actor} />
+            </Modal.Window>
+          </Modal>
+          <Modal>
+            <Modal.OpenButton opens="update-actor">
+              <LuPencilLine className="actor_details-icon" />
+            </Modal.OpenButton>
+            <Modal.Window name="update-actor">
+              <ActorForm actorToUpdate={actor} />
             </Modal.Window>
           </Modal>
         </div>

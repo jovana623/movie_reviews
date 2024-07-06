@@ -1,15 +1,21 @@
 import "../../styles/components/ActorForm.scss";
 import { useForm } from "react-hook-form";
 import { useCreateActor } from "./useCreateActor";
+import { useUpdateActor } from "./useUpdateActor";
 
-function ActorForm() {
+/* eslint-disable react/prop-types */
+function ActorForm({ actorToUpdate = {} }) {
   const { createActor, isLoading } = useCreateActor();
+  const { updateActor, isLoading: isUpdating } = useUpdateActor();
+  const { id: editId, ...editValues } = actorToUpdate;
+  const isUpdateSession = Boolean(editId);
+
   const {
     handleSubmit,
     register,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({ defaultValues: isUpdateSession ? editValues : {} });
 
   function onSubmit(data) {
     const formData = new FormData();
@@ -21,7 +27,12 @@ function ActorForm() {
       formData.append("image", data.image[0]);
     }
 
-    createActor(formData);
+    if (isUpdateSession) {
+      updateActor({ actorId: editId, updatedData: formData });
+    } else {
+      createActor(formData);
+    }
+
     reset();
   }
 
@@ -29,7 +40,7 @@ function ActorForm() {
     console.log(errors);
   }
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading || isUpdating) return <div>Loading...</div>;
 
   return (
     <form onSubmit={handleSubmit(onSubmit, onError)} className="actor_form">
@@ -65,7 +76,7 @@ function ActorForm() {
         <input type="file" id="image" {...register("image")} />
       </div>
       <button type="submit" className="actor_form-submit">
-        Add actor
+        {isUpdateSession ? "Update actor" : "Add actor"}
       </button>
     </form>
   );

@@ -14,7 +14,7 @@ function CreateMovieForm({ movieToUpdate = {} }) {
   const { actors, isLoading: isLoadingActors } = useActors();
   const { directors, isLoading: isLoadingDirectors } = useDirectors();
   const { id: editId, ...editValues } = movieToUpdate;
-  console.log(movieToUpdate);
+
   const isUpdateSession = Boolean(editId);
   const {
     register,
