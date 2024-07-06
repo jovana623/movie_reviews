@@ -15,6 +15,21 @@
     flex-direction: column;
     gap: 2rem;
 
+    &-header {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    &-icon {
+      color: $color-white;
+      font-size: 3rem;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
     &-name {
       font-size: 4rem;
       color: $color-white;

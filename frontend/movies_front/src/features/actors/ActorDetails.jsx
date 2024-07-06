@@ -1,4 +1,7 @@
 import "../../styles/components/ActorDetails.scss";
+import { FaRegTrashCan } from "react-icons/fa6";
+import Modal from "../../ui/Modal";
+import DeleteWindow from "../../ui/DeleteWindow";
 
 /* eslint-disable react/prop-types */
 function ActorDetails({ actor }) {
@@ -10,7 +13,17 @@ function ActorDetails({ actor }) {
         className="actor_image"
       />
       <div className="actor_details">
-        <h2 className="actor_details-name">{actor.name}</h2>
+        <div className="actor_details-header">
+          <h2 className="actor_details-name">{actor.name}</h2>
+          <Modal>
+            <Modal.OpenButton opens="delete-actor">
+              <FaRegTrashCan className="actor_details-icon" />
+            </Modal.OpenButton>
+            <Modal.Window name="delete-actor">
+              <DeleteWindow object={actor} />
+            </Modal.Window>
+          </Modal>
+        </div>
         <p className="actor_details-birthday">
           <p className="actor_details-nationality">{actor.nationality}</p>
           Born <span>{actor.birth_date}</span>

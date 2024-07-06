@@ -23,3 +23,9 @@ export async function createActor(actorData) {
 
   return response.data;
 }
+
+export async function deleteActor(actorId) {
+  const url = `http://127.0.0.1:8000/api/actors/${actorId}`;
+  const response = await axios.delete(url);
+  return response.data;
+}

@@ -45,7 +45,7 @@ function MovieCard({ movie }) {
               <FaRegTrashCan className="movie__card--delete" />
             </Modal.OpenButton>
             <Modal.Window name="delete_movie">
-              <DeleteWindow movie={movie} />
+              <DeleteWindow object={movie} />
             </Modal.Window>
           </Modal>
         </div>
