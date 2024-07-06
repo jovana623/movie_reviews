@@ -7,6 +7,7 @@ import MoviePage from "./pages/MoviePage";
 import MainLayout from "./pages/MainLayout";
 import AdminPage from "./pages/AdminPage";
 import { Toaster } from "react-hot-toast";
+import ActorPage from "./pages/ActorPage";
 
 function App() {
   const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ function App() {
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/movies/:id" element={<MoviePage />} />
+            <Route path="/actors/:id" element={<ActorPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

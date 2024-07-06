@@ -1,9 +1,17 @@
+@import "../abstract/variables.scss";
+
 .actor__card {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
   z-index: 3;
+  color: $color-white;
+  text-decoration: none;
+
+  :hover {
+    cursor: pointer;
+  }
 
   &-image {
     width: 15rem;

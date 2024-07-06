@@ -1,0 +1,34 @@
+@import "../abstract/variables.scss";
+
+.actor {
+  display: flex;
+  gap: 5rem;
+  margin-top: 10rem;
+
+  &_image {
+    width: 30rem;
+    height: 40rem;
+  }
+
+  &_details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-name {
+      font-size: 4rem;
+      color: $color-white;
+    }
+
+    &-nationality {
+      font-size: 2rem;
+      color: $color-white;
+      margin-bottom: 1rem;
+    }
+
+    &-birthday {
+      font-size: 2rem;
+      color: $color-dark-gray;
+    }
+  }
+}

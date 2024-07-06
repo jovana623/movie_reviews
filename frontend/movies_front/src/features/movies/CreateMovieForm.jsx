@@ -5,12 +5,9 @@ import { useActors } from "../actors/useActors.js";
 import { useDirectors } from "../directors/useDirectors.js";
 import "../../styles/components/CreateMovieForm.scss";
 import { useUpdateMovie } from "./useUpdateMovie.js";
-import { useContext } from "react";
-import { ModalContext } from "../../ui/Modal.jsx";
 
 /* eslint-disable react/prop-types */
 function CreateMovieForm({ movieToUpdate = {} }) {
-  const { close } = useContext(ModalContext);
   const { movie, isLoading } = useCreateMovie();
   const { updateMovie, isLoading: isUpdating } = useUpdateMovie();
   const { genres, isLoading: isLoadingGenres } = useGenres();
@@ -54,7 +51,6 @@ function CreateMovieForm({ movieToUpdate = {} }) {
       movie(formData);
     }
     reset();
-    close();
   }
 
   function onError() {
