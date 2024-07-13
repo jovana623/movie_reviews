@@ -1,0 +1,52 @@
+@import "../abstract/variables.scss";
+
+.director_form {
+  background-color: $color-form;
+  padding: 2rem 4rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 2rem;
+  color: $color-white;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  &-field {
+    align-self: center;
+    justify-self: center;
+    background-color: $color-dark-blue;
+    border: 1px solid $color-white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    color: $color-white;
+    width: 100%;
+  }
+
+  &-submit {
+    align-self: flex-end;
+    background-color: $color-form;
+    border: 1px solid $color-white;
+    border-radius: 2rem;
+    color: $color-white;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-dark-blue;
+    }
+  }
+}
