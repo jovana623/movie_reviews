@@ -8,6 +8,9 @@ import MainLayout from "./pages/MainLayout";
 import AdminPage from "./pages/AdminPage";
 import { Toaster } from "react-hot-toast";
 import ActorPage from "./pages/ActorPage";
+import LoginRegisterPage from "./pages/LoginRegisterPage";
+import LoginForm from "./features/authentification/LoginForm";
+import RegisterForm from "./features/authentification/RegisterForm";
 
 function App() {
   const queryClient = new QueryClient();
@@ -16,12 +19,19 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="" element={<MainLayout />}>
-            <Route path="" element={<Homepage />} />
+          {/*Main routes*/}
+          <Route path="/" element={<MainLayout />}>
+            <Route path="/" element={<Homepage />} />
             <Route path="/admin" element={<AdminPage />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/movies/:id" element={<MoviePage />} />
             <Route path="/actors/:id" element={<ActorPage />} />
+          </Route>
+
+          {/*Auth routes*/}
+          <Route path="/registration/" element={<LoginRegisterPage />}>
+            <Route path="login" element={<LoginForm />} />
+            <Route path="register" element={<RegisterForm />} />
           </Route>
         </Routes>
       </BrowserRouter>

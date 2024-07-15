@@ -1,0 +1,42 @@
+@import "../abstract/variables.scss";
+
+.registration_form {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  &-input {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 1rem 0rem;
+    color: $color-white;
+    border-bottom: 1px solid $color-white;
+    font-size: 1.6rem;
+
+    &::placeholder {
+      font-size: 1.6rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-submit {
+    color: $color-white;
+    align-self: center;
+    background-color: transparent;
+    border: 1px solid $color-white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-dark-gray;
+      border: 1px solid $color-dark-gray;
+    }
+  }
+}

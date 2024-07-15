@@ -1,0 +1,55 @@
+@import "../abstract/variables.scss";
+
+.page {
+  background-image: url("../../assets/background.jpg");
+  height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  padding-top: 15rem;
+
+  &_form {
+    position: relative;
+    width: 25%;
+    margin: 0 auto;
+    background-color: transparent;
+    padding: 4rem 3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-blend-mode: darken;
+    z-index: 1;
+    color: $color-dark-gray;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      border-radius: 0.5rem;
+    }
+
+    &-buttons {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    & a {
+      background-color: transparent;
+      border: none;
+      font-size: 2rem;
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.active {
+  color: $color-white;
+}

@@ -7,7 +7,7 @@ import HeroGenres from "./HeroGenres";
 function HeroDetails() {
   const { movie, isLoading } = useMovie(16);
   if (isLoading) return <div>Loading</div>;
-  console.log(movie.genres);
+
   return (
     <div className="hero__details">
       <NavLink to={`movies/${movie.id}`} className="hero__details--title">

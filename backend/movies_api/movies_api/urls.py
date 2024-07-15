@@ -28,6 +28,7 @@ urlpatterns = [
     path('api/genres/',include('genres.urls')),
     path('api/directors/',include('directors.urls')),
     path('api/actors/',include('actors.urls')),
-    path('api/reviews/',include('reviews.urls'))
+    path('api/reviews/',include('reviews.urls')),
+    path('api/users/',include('users.urls'))
     
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

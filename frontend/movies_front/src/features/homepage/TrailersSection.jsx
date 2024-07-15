@@ -8,7 +8,7 @@ function TrailerSection() {
   const { movies, isLoading } = useMovies();
   if (isLoading) return <div>Loading...</div>;
   const featured_movies = movies.slice(0, 3);
-  console.log(featured_movies);
+
   return (
     <div className="trailer__section">
       <div className="trailer__section--trailers">
